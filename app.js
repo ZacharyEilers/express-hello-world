@@ -1,9 +1,9 @@
 const express = require('express');
 const fetch = require('node-fetch');
-const {parsed} = require('dotenv').config({path:__dirname+'/.env'});
+// const {parsed} = require('dotenv').config({path:__dirname+'/.env'});
 const path = require('path');
 
-const {PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET} = parsed;
+// const {PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET} = parsed;
 
 const base = "https://api-m.sandbox.paypal.com";
 const app = express()
