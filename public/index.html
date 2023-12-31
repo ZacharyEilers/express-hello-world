@@ -1,33 +1,168 @@
-<!doctype html>
-<html lang=en>
-  <head>
-    <meta charset=utf-8>
-    <title>Cyclic: Hello World</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/main.css">
-    <link rel="icon" href="/favicon.ico" />
-  </head>
-  <body>
-    <div id="hello-wrapper">
-      <div id="particles-js"></div>
-      <div class="content position-absolute w-100 top-0 pt-5">
-        <div class="cta">
-          <div id="hello" class="typewriter pb-3">
-            Hello World!
-          </div>
-          <a class="btn btn-primary mb-5" href="//app.cyclic.sh/api/login">Sign in to Cyclic</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade Comb</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Fade Comb</a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Photos</a>
+                    <a class="nav-link" href="#">Videos</a>
+                </div>
+            </div>
         </div>
-        <div id="world">
-          <canvas id='rotatingGlobe' style='cursor: move;'></canvas>
+    </nav>
+
+    <div id="showcase" class="d-flex flex-row justify-content-center mt-5">
+        <div class="px-3">
+            <h1 class="display-4">The Fade Comb</h1>
+            <p class="mb-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+                officia.
+            </p>
+
+            <p class="mb-0 h5 mt-3">$15.99 per comb</p>
+
+            <p class="h6 mt-3">Shipping</p>
+            <div class="d-flex flex-row">
+                <p class="mb-0 h6 me-3">$4.99 U.S.</p>
+                <p class="mb-0 h6">$15.99 international</p>
+            </div>
         </div>
-      </div>
     </div>
-    <script type='text/javascript' src='//d3js.org/d3.v3.min.js'></script>
-    <script type='text/javascript' src='//d3js.org/topojson.v1.min.js'></script>
-    <script type='text/javascript' src='planetaryjs.min.js'></script>
-    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type='text/javascript' src='particles.js'></script>
-    <script type='text/javascript' src='globe.js'></script>
-  </body>
+
+    <div class="container mt-3 d-flex flex-row justify-content-center">
+        <div>
+            <h4>Purchase</h4>
+            <div id="paypal-button-container"></div>
+            <p id="result-message"></p>
+        </div>
+    </div>
+
+    <div id="features" class="mb-5">
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-md-center">
+            <div class="d-flex flex-column mx-3">
+                <h2>Features</h2>
+                <p class="h5">No need to change the guards as on a clipper</p>
+            </div>
+            <div class="d-flex flex-column mx-3">
+                <p class="h5">Starts at a low fade at 1 and goes up to 3</p>
+            </div>
+            <div class="d-flex flex-column mx-3">
+                <p class="h5">Easy to use, even for cutting one's own hair</p>
+            </div>
+            <div class="d-flex flex-column mx-3">
+                <p class="h5">Consistent cut every time</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-none d-md-block">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="image0.jpeg" alt="" class="grid-image mb-4" />
+                <img src="image6.jpeg" alt="" class="grid-image mb-4" />
+                <video src="Video.MOV" controls class="grid-image mb-4"></video>
+                <video src="Video_3.MOV" controls class="grid-image mb-4"></video>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="image1.jpeg" alt="" class="grid-image mb-4" />
+                <img src="image8.jpeg" alt="" class="grid-image mb-4" />
+                <video src="Video_1.MOV" controls class="grid-image mb-4"></video>
+                <video src="Video_4.MOV" controls class="grid-image mb-4"></video>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="image3.jpeg" alt="" class="grid-image mb-4" />
+                <img src="image2.jpeg" alt="" class="grid-image mb-4" />
+                <video src="Video_2.MOV" controls class="grid-image mb-4"></video>
+                <video src="Video_5.MOV" controls class="grid-image mb-4"></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 d-block d-md-none">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="image0.jpeg" alt="" class="grid-image mb-4" />
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="image1.jpeg" alt="" class="grid-image mb-4" />
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="image3.jpeg" alt="" class="grid-image mb-4" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="image6.jpeg" alt="" class="grid-image mb-4" />
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="image8.jpeg" alt="" class="grid-image mb-4" />
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="image2.jpeg" alt="" class="grid-image mb-4" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <video src="Video.MOV" controls class="grid-image mb-4"></video>
+            </div>
+            <div class="col-12 col-md-4">
+                <video src="Video_1.MOV" controls class="grid-image mb-4"></video>
+            </div>
+            <div class="col-12 col-md-4">
+                <video src="Video_2.MOV" controls class="grid-image mb-4"></video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <video src="Video_3.MOV" controls class="grid-image mb-4"></video>
+            </div>
+            <div class="col-12 col-md-4">
+                <video src="Video_4.MOV" controls class="grid-image mb-4"></video>
+            </div>
+            <div class="col-12 col-md-4">
+                <video src="Video_5.MOV" controls class="grid-image mb-4"></video>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar bg-white py-4">
+        <div class="container-fluid d-flex flex-column flex-md-row justify-content-center">
+            <a class="nav-link mb-0 mx-3 fw-bold" href="#">The Fade Comb</a>
+            <a class="nav-link mx-3" href="#">Features</a>
+            <a class="nav-link mx-3" href="#">Pricing</a>
+            <a class="nav-link mx-3" href="#">Photos</a>
+            <a class="nav-link mx-3" href="#">Videos</a>
+        </div>
+    </nav>
+
+    <!-- Replace the "test" client-id value with your client-id -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&components=buttons&enable-funding=paylater,venmo,card" data-sdk-integration-source="integrationbuilder_sc"></script>
+    <script src="scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

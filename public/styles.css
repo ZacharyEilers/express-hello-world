@@ -1,0 +1,8 @@
+#showcase {
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.grid-image {
+    width: 100%;
+}
